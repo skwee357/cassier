@@ -3,11 +3,11 @@ Cassier knows everything about money and can format it for you!
 
 This small library was created in order to format different money values. For example if you store the value "4100.30" with currency "USD" in you database, using cassier you can display it in a nice way to the user based on his locale:
 ```javascript
-cassier.foramt(4100.30, 'USD', 'en');
+cassier.formatMoney(4100.30, 'USD', 'en');
 ```
 this will output ```$ 4,100.30```, however if your user is from Germany using the ```de``` locale
 ```javascript
-cassier.format(4100.30, 'USD', 'de');
+cassier.formatMoney(4100.30, 'USD', 'de');
 ```
 will output ```US$4.100,30```
 
