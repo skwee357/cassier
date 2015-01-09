@@ -1,0 +1,2 @@
+/*! German locale for Cassier. */
+!function(){var a="undefined"!=typeof module&&module.exports,b="de",c={decimal:",",thousand:".",format:"%s%c%v",native_currency:"EUR"};a?module.exports=function(a){a.locale(b,c)}:"undefined"!=typeof define&&define.amd?define(["cassier"],function(a){a.locale(b,c)}):"object"==typeof window.cassier&&window.cassier.locale&&window.cassier.locale(b,c)}();
