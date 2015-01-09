@@ -1,6 +1,6 @@
 {
   "name": "cassier",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "private": "false",
   "description": "Cassier is a small library that can format money based on locale",
   "author": {
@@ -21,6 +21,7 @@
     "grunt-contrib-jshint": "^0.10.0",
     "grunt-contrib-uglify": "^0.7.0",
     "grunt-mocha-test": "^0.12.6",
+    "grunt-release": "^0.9.0",
     "mocha": "^2.1.0"
   }
 }
