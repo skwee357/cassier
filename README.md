@@ -27,6 +27,19 @@ By default en_US (named ```en``` in cassier) is supported. I also added ```de```
 
 If you want to add your locale, please submit pull request **with test** (see ```tests/locale_de.js``` for test example). Pull requests without tests won't be merged.
 
+# How to add new locale?
+1. Create a new locale file name <locale>.js when locale is either 2 letter (en, de, fr) or 4 letter (en_US, en_GB) name.
+2. Use ```de.js``` as reference on how to support nodejs module or requirejs define/require.
+3. You locale name should match the locale file name (i.e. en.js define locale named "en").
+4. Locale settings consist of the following fields:
+  1. *decimal* - this is the decimal separator character (i.e. 500.30 - dot is the separating character)
+  2. *thousand* - this is the thousands separator character (i.e. 1,500,300 - comma is the separating character)
+  3. *format* - the format of the number when 
+    1. %s - is the minus sign position
+    2. %c - is the currency sign position
+    3. %v - is the value position
+  4. *native_currency* - is the native currency for this locale.
+
 # Supported currencies
 The currency list comes from here https://gist.github.com/brickcap/43681dadc0b6c91ec0b8
 So many thanks to @brickcap
