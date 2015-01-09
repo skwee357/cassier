@@ -53,12 +53,26 @@ module.exports = function (grunt) {
                     require: true
                 }
             }
+        },
+
+        release: {
+            options: {
+                bump: true,
+                add: true,
+                commit: true,
+                tag: true,
+                push: true,
+                pushTags: true,
+                npm: true,
+                tagName: 'v-<%= version %>'
+            }
         }
     });
 
     grunt.loadNpmTasks('grunt-mocha-test');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-jshint');
+    grunt.loadNpmTasks('grunt-release');
 
     grunt.registerTask('test', 'mochaTest');
     grunt.registerTask('build', ['mochaTest', 'jshint', 'uglify']);
