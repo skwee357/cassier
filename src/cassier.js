@@ -1131,6 +1131,14 @@
         return loc.format.toString().replace('%c', currency === loc.native_currency ? cur.symbol_native : cur.symbol).replace('%s', s).replace('%v', (j ? i.substr(0, j) + t : "") + i.substr(j).replace(/(\d{3})(?=\d)/g, "$1" + t) + (c ? d + Math.abs(n - i).toFixed(c).slice(2) : ""));
     };
 
+    lib.currencies = function () {
+        return currencies;
+    };
+
+    lib.currency = function (code) {
+        return (code in currencies) ? currencies[code] : null;
+    };
+
     if (hasModule) {
         module.exports = lib;
     } else if (hasDefine) {
