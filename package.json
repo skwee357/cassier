@@ -1,6 +1,6 @@
 {
   "name": "cassier",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "description": "Cassier is a small library that can format money based on locale",
   "author": "Dmitry Kudryavtsev <skwee357+npm@gmail.com>",
   "keywords": [
