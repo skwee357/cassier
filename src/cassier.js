@@ -1139,6 +1139,10 @@
         return (code in currencies) ? currencies[code] : null;
     };
 
+    lib.isValidCurrency = function (code) {
+        return (code in currencies);
+    };
+
     if (hasModule) {
         module.exports = lib;
     } else if (hasDefine) {
