@@ -66,6 +66,17 @@ module.exports = function (grunt) {
             }
         },
 
+        gitadd: {
+            task: {
+                options: {
+                    force: true
+                },
+                files: {
+                    src: ['dist/cassier.min.js']
+                }
+            }
+        },
+
         release: {
             options: {
                 bump: false,
@@ -85,11 +96,12 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-release');
     grunt.loadNpmTasks('grunt-bump');
+    grunt.loadNpmTasks('grunt-git');
 
     grunt.registerTask('test', ['mochaTest', 'jshint']);
     grunt.registerTask('build', ['mochaTest', 'jshint', 'uglify']);
 
-    grunt.registerTask('release:patch', ['mochaTest', 'jshint', 'bump:patch', 'uglify', 'release']);
-    grunt.registerTask('release:minor', ['mochaTest', 'jshint', 'bump:minor', 'uglify', 'release']);
-    grunt.registerTask('release:major', ['mochaTest', 'jshint', 'bump:major', 'uglify', 'release']);
+    grunt.registerTask('release:patch', ['mochaTest', 'jshint', 'bump:patch', 'uglify', 'gitadd', 'release']);
+    grunt.registerTask('release:minor', ['mochaTest', 'jshint', 'bump:minor', 'uglify', 'gitadd', 'release']);
+    grunt.registerTask('release:major', ['mochaTest', 'jshint', 'bump:major', 'uglify', 'gitadd', 'release']);
 };
