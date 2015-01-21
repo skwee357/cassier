@@ -1128,11 +1128,11 @@
         thousand: ',',
         number_format: '%s%v',
         money_format: '%c%n',
+        decimal_digits: 2,
         native_currency: 'USD'
     });
 
-    lib.formatNumber = function (value, decimal_digits, locale) {
-        decimal_digits = decimal_digits || 2;
+    lib.formatNumber = function (value, locale) {
         locale = locale || _currentLocale;
         if (!(locale in _locales)) {
             throw new Error('Invalid locale: ' + locale);
@@ -1140,7 +1140,7 @@
 
         var loc = _locales[locale],
             n = value,
-            c = decimal_digits,
+            c = loc.decimal_digits,
             d = loc.decimal,
             t = loc.thousand,
             s = n < 0 ? '-' : '',
@@ -1162,7 +1162,7 @@
 
         var loc = _locales[locale],
             cur = lib.currencyInfo(currency),
-            formattedNumber = lib.formatNumber(amount, cur.decimal_digits, locale);
+            formattedNumber = lib.formatNumber(amount, locale);
 
         return loc.money_format.toString().replace('%c', currency === loc.native_currency ? cur.symbol_native : cur.symbol).replace('%n', formattedNumber);
     };

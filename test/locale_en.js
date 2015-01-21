@@ -27,10 +27,6 @@ describe('Cassier module in English', function () {
         cassier.formatNumber(1200.399).should.equal('1,200.40');
     });
 
-    it('Should format 1200.399 as 1,200.399', function () {
-        cassier.formatNumber(1200.399, 3).should.equal('1,200.399');
-    });
-
     it('Should format 1200.30 USD as $1,200.30', function () {
         cassier.formatMoney(1200.30, 'USD').should.equal('$1,200.30');
     });

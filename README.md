@@ -32,7 +32,8 @@ If you want to add your locale, please submit pull request **with test** (see ``
   4. *money_format* - the format of the money when
     1. %c - is currency symbol position
     2. %n - is number position
-  5. *native_currency* - is the native currency for this locale.
+  5. *decimal_digits* - is the number of digits that should come after decimal separator
+  6. *native_currency* - is the native currency for this locale.
 
 # API
 cassier.isValidCurrency(code):boolean - Checks whether give currency code is valid or not.
@@ -43,7 +44,7 @@ cassier.allCurrencies()|object - Return an object of all supported currencies.
 
 cassier.locale(locale, obj)|string - Defines / changes / get locale. If no arguments given will return the current locale used. If only locale is given, will try to switch to this locale if possible (if not Error will be thrown). If both locale and obj given, defines a new locale and switches to it.
 
-cassier.formatNumber(value, decimal_digits, locale)|string - Formats a number using the formatting rules of given locale. If no locale given - uses the currently active locale. If no decimal_digits given, will use 2 as fallback.
+cassier.formatNumber(value, locale)|string - Formats a number using the formatting rules of given locale. If no locale given - uses the currently active locale.
 
 cassier.formatMoney(amount, currency, locale)|string - Formats money using the formatting rules of given locale. If no locale given - uses the currency active locale.
 

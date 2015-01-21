@@ -16,6 +16,7 @@
         thousand: '.',
         number_format: '%s%v',
         money_format: '%c%n',
+        decimal_digits: 2,
         native_currency: 'EUR'
     });
 }));
