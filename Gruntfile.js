@@ -72,7 +72,7 @@ module.exports = function (grunt) {
                     force: true
                 },
                 files: {
-                    src: ['dist/cassier.min.js']
+                    src: ['dist/cassier.min.js', 'bower.json']
                 }
             }
         },
