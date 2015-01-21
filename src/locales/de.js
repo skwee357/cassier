@@ -5,10 +5,10 @@
     } else if (typeof module !== 'undefined' && module.exports) {
         module.exports = factory(require('../cassier'));
     } else {
-        if (typeof this['cassier'] !== "object") {
+        if (typeof this.cassier !== "object") {
             throw new Error('No cassier defined');
         }
-        factory(this['cassier']);
+        factory(this.cassier);
     }
 }(this, function (cassier) {
     cassier.locale('de', {
@@ -17,5 +17,5 @@
         number_format: '%s%v',
         money_format: '%c%n',
         native_currency: 'EUR'
-    })
+    });
 }));

@@ -7,10 +7,10 @@
     } else if (typeof module !== 'undefined' && module.exports) {
         module.exports = factory(require('big.js'));
     } else {
-        if (typeof this['Big'] === "undefined") {
+        if (typeof this.Big === "undefined") {
             throw new Error('Cassier require bigjs');
         }
-        this['cassier'] = factory(this['Big']);
+        this.cassier = factory(this.Big);
     }
 }(this, function (Big) {
     var _currencies = {
