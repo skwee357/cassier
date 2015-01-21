@@ -1,14 +1,17 @@
 {
   "name": "cassier",
   "version": "0.4.1",
-  "description": "Cassier is a small library that can format money based on locale",
+  "description": "Cassier is a small library that can format money based on locale and provide money arithmetic based on big.js",
   "author": "Dmitry Kudryavtsev <skwee357+npm@gmail.com>",
   "keywords": [
     "money",
     "currency",
     "format",
     "localized",
-    "localization"
+    "localization",
+    "l10n",
+    "i18n",
+    "number"
   ],
   "main": "dist/cassier.min.js",
   "bugs": {
@@ -36,5 +39,8 @@
   },
   "scripts": {
     "test": "mocha"
+  },
+  "dependencies": {
+    "big.js": "^3.0.0"
   }
 }

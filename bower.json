@@ -1,0 +1,36 @@
+{
+  "name": "cassier",
+  "version": "0.4.1",
+  "homepage": "https://github.com/skwee357/cassier",
+  "authors": [
+    "Dmitry Kudryavtsev <skwee357+npm@gmail.com>"
+  ],
+  "keywords": [
+    "money",
+    "currency",
+    "format",
+    "localized",
+    "localization",
+    "l10n",
+    "i18n",
+    "number"
+  ],
+  "description": "Cassier is a small library that can format money based on locale and provide money arithmetic based on big.js",
+  "main": "dist/cassier.min.js",
+  "moduleType": [
+    "amd",
+    "globals",
+    "node"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "big.js": "~3.0.0"
+  }
+}
