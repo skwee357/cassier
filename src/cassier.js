@@ -1113,7 +1113,7 @@
                     throw new Error('Cannot load locale: ' + locale);
                 }
             } else if (hasDefine) {
-                require('./locales/de');
+                require('./locales/' + locale);
             } else {
                 throw new Error('Invalid locale: ' + locale);
             }
